@@ -1,0 +1,214 @@
+body{
+    background-color: #111;
+    padding: 0;
+    margin: 0;
+}
+h3{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.topHeader{
+    background-color: #eee;
+    height: 78vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.greeting{
+    display: flex;
+    width: 120px;
+    height: 300px;
+    flex-direction: column-reverse;
+}
+.hey{
+    color: #333;
+    font-size: 120px;
+    transform: rotate(-90deg);
+}
+.hola{
+    color: #333;
+    font-size: 32px;
+    width: max-content;
+    position: relative;
+    top: -110px;
+    left: 28px;
+}
+.title{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 265px;
+    height: max-content;
+}
+.letter1 ,.letter2 ,.letter3{
+    color: #333;
+    font-size: 31px;
+    height: 5px;
+}
+.letter2 ,.letter3{
+    margin-left: 5px;
+}
+.letter4{
+    font-size: 120px;
+    color: #333;
+    height: 120px;
+}
+.letter5{
+    color: #333;
+    font-size: 45px;
+}
+.welcome{
+    color: #eee;
+    font-size: 100px;
+    text-align: center;
+    margin: 10px;
+}
+.navbar{
+    background-color: #111;
+}
+.navMenu{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navMenu div{
+    display: flex;
+    color: #eee;
+    width: 45%;
+    margin: 10px;
+    font-weight: 800;
+}
+.navMenu div li:hover{
+    text-shadow: 1px 1px 3px #eee;
+    cursor: pointer;
+}
+
+.navMenu div li{
+    margin-right: 50px;
+}
+
+.moveMenu{
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 70vh;
+    right: 0;
+}
+.buttons{
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#About{
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#About p{
+    color: #eee;
+    max-width: 350px;
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
+    margin: 0;
+    margin-top: 30px;
+}
+.subTitle{
+    color: #eee;
+    font-size: xx-large;
+    text-align: center;
+}
+
+#Skills{
+    margin-top: 300px;
+}
+.skillsList{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    flex-wrap: wrap
+}
+.skillCard{
+    border: 1px solid #eee;
+    width: 200px;
+    border-radius: 5px;
+    height: 80vh;
+    max-height: 600px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cardHeader{
+    color: #eee;
+    padding: 20px;
+    font-weight: 600;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cardBody{
+    list-style: none;
+    color: #eee;
+    font-weight: 500;
+    padding: 0;
+}
+
+.cardBody li{
+    margin-bottom: 15px;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    text-indent: 10px;
+}
+
+#Projects{
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 300px;
+}
+#Projects p{
+    color: #eee;
+    text-align: center;
+    margin: 0;
+}
+.upbutton{
+    width: max-content;
+    height: max-content;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+}
+
+.projectList{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    display: flex;
+    align-content: space-between;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.projectList div{
+    background-color: #eee;
+    width: 50vh;
+    height: 300px;
+    margin: 20px;
+    min-width: 400px;
+}

@@ -15,10 +15,12 @@ function App() {
         <Projects/>
       </main>
       <footer>
-        <h3>Thanks for visiting my portfolio</h3>
-        <p>{"(You can click on the arrow to go to the top)"}</p>
+        <h3 className='welcome'>Thanks for visiting my portfolio</h3>
+        <p className='subTitle'>{"(You can click on the arrow to go to the top)"}</p>
       </footer>
-        <IoArrowUpCircle/>
+      <div className='upbutton' onClick={() => window.scrollTo(0,0)}>
+        <IoArrowUpCircle size={50} color='#eee'/>
+      </div>
     </div>
   );
 }

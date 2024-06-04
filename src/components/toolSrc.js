@@ -5,26 +5,26 @@ import { FaGitAlt, FaLinux, FaAws, FaDocker } from "react-icons/fa";
 
 const toolsArr = [
     [
-        {name: "Postgresql", icon: <SiPostgresql/>},
-        {name: "Mariadb", icon: <SiMariadbfoundation/>},
-        {name: "Python", icon: <SiPython/>},
-        {name: "Django Rest", icon: <SiDjango/>},
+        {name: "Postgresql", icon: <SiPostgresql size={30}/>},
+        {name: "Mariadb", icon: <SiMariadbfoundation size={30}/>},
+        {name: "Python", icon: <SiPython size={30}/>},
+        {name: "Django Rest", icon: <SiDjango size={30}/>},
     ],
     [
-        {name: "HTML", icon: <IoLogoHtml5/>},
-        {name: "CSS", icon: <IoLogoCss3/>},
-        {name: "Bootstrap", icon: <DiBootstrap/>},
-        {name: "Javascript", icon: <IoLogoJavascript/>},
-        {name: "Reac Js", icon: <DiReact/>},
-        {name: "Reac Native", icon: <DiReact/>},
-        {name: "Next Js", icon: <SiNextdotjs/>},
+        {name: "HTML", icon: <IoLogoHtml5 size={30}/>},
+        {name: "CSS", icon: <IoLogoCss3 size={30}/>},
+        {name: "Bootstrap", icon: <DiBootstrap size={30}/>},
+        {name: "Javascript", icon: <IoLogoJavascript size={30}/>},
+        {name: "Reac Js", icon: <DiReact size={30}/>},
+        {name: "Reac Native", icon: <DiReact size={30}/>},
+        {name: "Next Js", icon: <SiNextdotjs size={30}/>},
     ],
     [
-        {name: "GIT", icon: <FaGitAlt/>},
-        {name: "Linux", icon: <FaLinux/>},
-        {name: "AWS", icon: <FaAws/>},
-        {name: "Vercel", icon: <SiVercel/>},
-        {name: "Docker", icon: <FaDocker/>},
+        {name: "GIT", icon: <FaGitAlt size={30}/>},
+        {name: "Linux", icon: <FaLinux size={30}/>},
+        {name: "AWS", icon: <FaAws size={30}/>},
+        {name: "Vercel", icon: <SiVercel size={30}/>},
+        {name: "Docker", icon: <FaDocker size={30}/>},
     ],
 ]
 

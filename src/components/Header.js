@@ -7,33 +7,34 @@ const Header = () => {
     const [theme, setTheme] = useState("#000")
 
     const showMail = () => {
-        
+        setTheme('#fff')
     }
 
     return(
         <header>
-        <div>
-            <div>
-                <h3>Hey!</h3>
-                <h3>Hola!</h3>
+        <div className='topHeader'>
+            <div className='greeting'>
+                <h3 className='hey'>Hey!</h3>
+                <h3 className='hola'>Hola!</h3>
             </div>
-            <div>
-                <p>I'M</p>
-                <p>A</p>
-                <p>FULL-STACK</p>
-                <p>WEB</p>
-                <p>DEVELOPER</p>
+            <div className='title'>
+                <h3 className='letter1'>I'M</h3>
+                <h3 className='letter2'>A</h3>
+                <h3 className='letter3'>FULL-STACK</h3>
+                <h3 className='letter4'>WEB</h3>
+                <h3 className='letter5'>DEVELOPER</h3>
             </div>
+            <div style={{width:"120px"}}></div>
         </div>
-        <h1>WELCOME TO MY PORTFOLIO</h1>
-        <nav>
-            <ul>
+        <h1 className='welcome'>WELCOME TO MY PORTFOLIO</h1>
+        <nav className='navbar'>
+            <ul className='navMenu'>
                 <div>
-                    <li>About Me</li>
-                    <li>Skills</li>
-                    <li>Project</li>
+                    <li><a href='#About'>About Me</a></li>
+                    <li><a href='#Skills'>Skills</a></li>
+                    <li><a href='#Projects'>Projects</a></li>
                 </div>
-                <div>          
+                <div className='moveMenu'>          
                     <li><LinkButton link="https://github.com/Jorge-AmezcuaC" text="Github" icon={<FaGithub color={theme}/>}/></li>
                     <li><LinkButton link="https://www.linkedin.com/in/jorge-alejandro-amezcua-carrillo/" text="Linkedin" icon={<FaLinkedin color={theme}/>}/></li>
                     <li><LinkButton text="SAY HEY!" icon={<MdEmail color={theme}/>} action={showMail}/></li>

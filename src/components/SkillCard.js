@@ -2,12 +2,12 @@ import React from "react";
 
 const SkillCard = ({icon, name, content}) => {
     return(
-        <div>
-            <div>
+        <div className="skillCard">
+            <div className="cardHeader">
                 {icon}
                 <p>{name}</p>
             </div>
-            <ul>
+            <ul className="cardBody">
                 {content && content.map((item) => {
                     return(
                         <li>

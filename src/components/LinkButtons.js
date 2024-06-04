@@ -2,7 +2,7 @@ import React from "react";
 
 const LinkButton = ({link, icon, text, action}) => {
     return(
-        <a href={link}><button onClick={action}>{icon}{text}</button></a>
+        <a href={link}><button className="buttons" onClick={action}>{icon}{text}</button></a>
     )
 }
 

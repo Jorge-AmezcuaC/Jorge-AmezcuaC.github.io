@@ -1,4 +1,6 @@
 import './App.css';
+import './animations.css';
+import './responsive.css'
 import Header from './components/Header';
 import AboutMe from './components/AboutMe';
 import Skills from './components/Skills';

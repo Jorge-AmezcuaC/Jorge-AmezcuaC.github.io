@@ -1,0 +1,46 @@
+.subTitle, .skillCard{
+    animation-name: apper;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-play-state: paused;
+}
+
+.letter1, .letter2, .letter3, .letter4, .letter5{
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+}
+
+.letter4{
+    animation-name: toRigth;
+}
+
+.letter1, .letter2{
+    animation-name: toDown;
+}
+
+.letter3{
+    animation-name: toLeft;
+}
+
+.letter5{
+    animation-name: toUp;
+}
+
+@keyframes apper{
+    0% {transform: translateY(50px); opacity: 0;}
+}
+
+@keyframes toRigth {
+    0% {transform: translateX(-100px);}
+}
+@keyframes toLeft {
+    0% {transform: translateX(100px);}
+}
+@keyframes toUp {
+    0% {transform: translateY(100px);}
+}
+@keyframes toDown {
+    0% {transform: translateY(-100px);}
+}

@@ -1,8 +1,19 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
+import { useIsVisible } from "./useVisible";
 
 const SkillCard = ({icon, name, content}) => {
+
+    const ref = useRef()
+    const isVisible = useIsVisible(ref)
+
+    useEffect(() => {
+        if(isVisible){
+            document.getElementById(name).style.animationPlayState = 'running'
+        }
+    }, [isVisible])
+
     return(
-        <div className="skillCard">
+        <div className="skillCard" id={name} ref={ref}>
             <div className="cardHeader">
                 {icon}
                 <p>{name}</p>
@@ -10,7 +21,7 @@ const SkillCard = ({icon, name, content}) => {
             <ul className="cardBody">
                 {content && content.map((item) => {
                     return(
-                        <li>
+                        <li key={item.name}>
                             {item.icon} {item.name}
                         </li>
                     )

@@ -15,13 +15,14 @@ const Projects = () => {
     useEffect(() => {
         if(isVisible){
             document.getElementById('projectstitle').style.animationPlayState = 'running'
+            document.getElementById('comment').style.animationPlayState = 'running'
         }
     }, [isVisible])
 
     return(
         <div id="Projects" ref={ref}>
             <h3 className="subTitle" id="projectstitle">Projects</h3>
-            <p>{"For now I only have School projects or projects for fun, I'm sorry :("}</p>
+            <p id="comment">{"For now I only have School projects or projects for fun, I'm sorry :("}</p>
             <div className="projectList">
                 {projects.map((item) => {
                     return(

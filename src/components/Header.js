@@ -6,6 +6,7 @@ import {useIsVisible} from './useVisible'
 
 const Header = () => {
     const [theme, setTheme] = useState("#000")
+    const [showNav, setShowNav] = useState(false)
 
     const showMail = () => {
         setTheme('#fff')
@@ -14,11 +15,21 @@ const Header = () => {
     const ref = useRef()
     const isVisible = useIsVisible(ref)
 
+    const refNav = useRef()
+    const naVisible = useIsVisible(refNav)
+
+
     useEffect(() => {
-        if(isVisible){
+        if(isVisible)
             document.getElementById('welcome').style.animationPlayState = 'running'
+        if(!naVisible){
+            setShowNav(true)
+            setTheme('#fff')
+        }else{
+            setShowNav(false)
+            setTheme('#000')
         }
-    }, [isVisible])
+    }, [isVisible, naVisible])
 
     return(
         <header>
@@ -37,7 +48,7 @@ const Header = () => {
             <div style={{width:"120px"}}></div>
         </div>
         <h1 className='welcome' id='welcome' ref={ref}>WELCOME TO MY PORTFOLIO</h1>
-        <nav className='navbar'>
+        <nav className='navbar' ref={refNav}>
             <ul className='navMenu'>
                 <div className='firstOptions'>
                     <li><a href='#About'>About Me</a></li>
@@ -45,9 +56,24 @@ const Header = () => {
                     <li><a href='#Projects'>Projects</a></li>
                 </div>
                 <div className='moveMenu'>          
-                    <li><LinkButton link="https://github.com/Jorge-AmezcuaC" text="Github" icon={<FaGithub color={theme} size={30}/>}/></li>
-                    <li><LinkButton link="https://www.linkedin.com/in/jorge-alejandro-amezcua-carrillo/" text="Linkedin" icon={<FaLinkedin color={theme} size={30}/>}/></li>
-                    <li><LinkButton text="SAY HEY!" icon={<MdEmail color={theme} size={30}/>} action={showMail}/></li>
+                    <li><LinkButton id={'b1'} link="https://github.com/Jorge-AmezcuaC" theme={theme} text="Github" icon={<FaGithub color={theme} size={30}/>}/></li>
+                    <li><LinkButton id={'b2'} link="https://www.linkedin.com/in/jorge-alejandro-amezcua-carrillo/" theme={theme} text="Linkedin" icon={<FaLinkedin color={theme} size={30}/>}/></li>
+                    <li><LinkButton id={'b3'} theme={theme} text="SAY HEY!" icon={<MdEmail color={theme} size={30}/>} action={showMail}/></li>
+                </div>
+            </ul>
+        </nav>
+        
+        <nav className='fixNav' style={{display: `${!showNav ? 'none': ''}`}}>
+            <ul className='navMenu'>
+                <div className='firstOptions'>
+                    <li><a href='#About'>About Me</a></li>
+                    <li><a href='#Skills'>Skills</a></li>
+                    <li><a href='#Projects'>Projects</a></li>
+                </div>
+                <div className='moveMenu'>          
+                    <li><LinkButton id={'b11'} link="https://github.com/Jorge-AmezcuaC" theme={theme} text="Github" icon={<FaGithub color={theme} size={30}/>}/></li>
+                    <li><LinkButton id={'b22'} link="https://www.linkedin.com/in/jorge-alejandro-amezcua-carrillo/" theme={theme} text="Linkedin" icon={<FaLinkedin color={theme} size={30}/>}/></li>
+                    <li><LinkButton id={'b33'} theme={theme} text="SAY HEY!" icon={<MdEmail color={theme} size={30}/>} action={showMail}/></li>
                 </div>
             </ul>
         </nav>

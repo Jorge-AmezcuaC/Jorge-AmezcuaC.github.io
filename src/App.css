@@ -76,6 +76,15 @@ a{
 .navbar{
     background-color: #111;
 }
+.fixNav{
+    background-color: #111;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+.fixNav .moveMenu{
+    top: 0;
+}
 .navMenu{
     list-style-type: none;
     display: flex;
@@ -106,12 +115,14 @@ a{
     right: 0;
 }
 .buttons{
+    padding-top: 10px;
     height: max-content;
     width: max-content;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: none;
 }
 .buttonText{
     font-weight: 600;
@@ -206,7 +217,7 @@ a{
     height: max-content;
     position: fixed;
     right: 10px;
-    top: 10px;
+    top: 10vh;
 }
 
 .projectList{

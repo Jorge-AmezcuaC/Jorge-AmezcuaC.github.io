@@ -46,7 +46,6 @@
     animation-play-state: running;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    border-bottom: 1px solid #000;
 }
 .buttonTextOut{
     animation-name: buttonsOut;
@@ -56,7 +55,6 @@
     animation-duration: 2s;
     animation-fill-mode: forwards;
     width: 60px;
-    border-bottom: 1px solid #000;
 }
 
 @keyframes apper{

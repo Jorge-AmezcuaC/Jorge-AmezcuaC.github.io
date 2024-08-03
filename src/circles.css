@@ -1,0 +1,40 @@
+.circle1{
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    border: 1px solid #111;
+    border-radius: 100%;
+    top: 35vh;
+    left: 17vw;
+}
+.circle2{
+    position: absolute;
+    width: 16vw;
+    height: 16vw;
+    border: 1px solid #111;
+    border-radius: 100%;
+    top: 3vh;
+    right: 20vw;
+}
+.circle3{
+    position: absolute;
+    width: 12vw;
+    height: 12vw;
+    border: 1px solid #111;
+    border-radius: 100%;
+    top: 45vh;
+    right: 4vw;
+}
+.circle4{
+    position: absolute;
+    width: 5vw;
+    height: 5vw;
+    border: 1px solid #111;
+    border-radius: 100%;
+    top: 18vh;
+    left: 11vw;
+}
+
+/* .circle1:hover{
+    box-shadow: 2px 2px 2px #111;
+} */ 

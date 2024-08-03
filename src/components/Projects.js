@@ -22,7 +22,7 @@ const Projects = () => {
     return(
         <div id="Projects" ref={ref}>
             <h3 className="subTitle" id="projectstitle">Projects</h3>
-            <p id="comment">{"For now I only have School projects or projects for fun, I'm sorry :("}</p>
+            <p id="comment">{"Im still coding this part sorry, last update: 23:00 2/aug/2024"}</p>
             <div className="projectList">
                 {projects.map((item) => {
                     return(
@@ -32,6 +32,7 @@ const Projects = () => {
                     )
                 })}
             </div>
+            <button className="redirectButton">Conocer Mas</button>
         </div>
     )
 }

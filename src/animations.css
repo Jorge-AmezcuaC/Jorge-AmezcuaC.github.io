@@ -57,6 +57,14 @@
     width: 60px;
 }
 
+.redirectButton{
+    animation-name: clickMe;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+    animation-play-state: running;
+    animation-duration: 5s;
+}
+
 @keyframes apper{
     0% {transform: translateY(50px); opacity: 0;}
 }
@@ -83,4 +91,12 @@
 }
 @keyframes buttonsOut {
     100% {width: 0px;}
+}
+
+@keyframes clickMe {
+    10% {transform: rotate(-3deg); border-color: #0f0;}
+    20% {transform: rotate(3deg); border-color: #33f;}
+    30% {transform: rotate(-3deg); border-color: #f00;}
+    40% {transform: rotate(3deg); border-color: #fff;}
+    100%{transform: rotate(0deg);}
 }

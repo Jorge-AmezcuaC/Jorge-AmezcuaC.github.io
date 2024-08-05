@@ -87,6 +87,7 @@ a{
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 1;
 }
 .fixNav .moveMenu{
     top: 0;
@@ -103,6 +104,7 @@ a{
     width: 45%;
     margin: 10px;
     font-weight: 800;
+    transition: 1s;
 }
 .navMenu div li:hover{
     text-shadow: 1px 1px 3px #eee;
@@ -129,6 +131,7 @@ a{
     align-items: center;
     justify-content: center;
     background: none;
+    cursor: pointer;
 }
 .buttonText{
     font-weight: 600;
@@ -141,6 +144,97 @@ a{
     width: 0px;
 }
 
+.overlay{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #1119;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.emailContainer{
+    background-color: #eee;
+    padding: 20px;
+    width: max-content;
+    border-radius: 10px;
+    z-index: 2;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+}
+.closeButton{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.copyButton{
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-size: x-small;
+    color: #444;
+}
+.copyButton p{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.questionButton{
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+.email{
+    color: #444;
+    
+}
+.ttt{
+    background-color: #111;
+    color: #eee;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    top: -150%;
+    right: 100%;
+    width: 200px;
+    visibility: hidden;
+    padding: 10px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.ttt::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
+}
+
+.questionButton:hover .ttt{
+    visibility: visible;
+    opacity: 1;
+}
 #About{
     margin-top: 200px;
     display: flex;
@@ -219,11 +313,10 @@ a{
     margin: 0;
 }
 .upbutton{
-    width: max-content;
-    height: max-content;
     position: fixed;
     right: 10px;
     top: 10vh;
+    cursor: pointer;
 }
 
 .projectList{
@@ -235,14 +328,45 @@ a{
     justify-content: center;
     margin-top: 20px;
 }
-
-.projectList div{
-    background-color: #eee;
+.imgCont{
+    background-color: #111;
     width: 50vh;
     height: 300px;
     margin: 20px;
     min-width: 300px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
 }
+.imgProy{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: blur(2px);
+    filter: opacity(80%);
+    color: #eee;
+}
+
+.imgCont:hover .descPro{
+    height: 100%;
+}
+
+.descPro{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #111a;
+    color: #eee;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
 .redirectButton{
     background-color: #111;
     color: #fff;

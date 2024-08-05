@@ -21,7 +21,7 @@ const LinkButton = ({theme, link, icon, text, action, id}) => {
     }
 
     return(
-        <a href={link} onMouseEnter={mouseIn} onMouseLeave={mouseOut}>
+        <a href={link} onMouseEnter={mouseIn} onMouseLeave={mouseOut} target="_blank" rel="noreferrer">
             <button className="buttons" onClick={action}>
                 {icon}<div className="buttonText" id={id} style={{color: theme}}>{text}</div>
             </button>

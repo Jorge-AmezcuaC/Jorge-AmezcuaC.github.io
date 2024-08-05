@@ -5,13 +5,19 @@ import { MdEmail } from "react-icons/md";
 import {useIsVisible} from './useVisible'
 import '../circles.css'
 import Circle from './Circle';
+import EmailShow from './EmailShow';
 
 const Header = () => {
     const [theme, setTheme] = useState("#000")
     const [showNav, setShowNav] = useState(false)
+    const [showEmail, setShowEmail] = useState(false)
 
     const showMail = () => {
-        setTheme('#fff')
+        setShowEmail(true)
+    }
+
+    const hiddeMail = () => {
+        setShowEmail(false)
     }
 
     const ref = useRef()
@@ -85,6 +91,7 @@ const Header = () => {
                 </div>
             </ul>
         </nav>
+        {showEmail && <EmailShow action={hiddeMail}/>}
       </header>
     )
 }
